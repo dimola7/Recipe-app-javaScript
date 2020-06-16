@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: slategray;
+}
+.navbar {
+  top: 0;
+  position: sticky;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-right: 10%;
+  padding-left: 10%;
+  overflow: hidden;
+  background-color: #1e272e;
+}
+.nav-logo {
+  width: 140px;
+  margin-top: -4%;
+  margin-bottom: -4%;
+}
+
+.search {
+  margin-top: -3%;
+  float: right;
+  padding: 7px 20px;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+.sear {
+  width: 30%;
+  padding: 12px 20px;
+  margin: auto;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  row-gap: 24px;
+  justify-items: center;
+}
+
+.recipe-card {
+  border: none;
+  border-radius: 50%;
+  width: 200px;
+}
+
+.recipe-card-img-container {
+  width: 100%;
+  height: 200px;
+}
+
+.recipe-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 8%;
+  padding-right: 10%;
+  padding-left: 10%;
+  background-color: #1e272e;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-logo {
+  width: 140px;
+  float: left;
+  margin-top: -3%;
+  margin-bottom: -4%;
+}
+.title {
+  background-color: #1e272e;
+  color: #fff;
+  text-align: center;
+  font-family: "Balsamiq Sans", cursive;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.button {
+  background-color: #1e272e;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-left: 22%;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    justify-content: center;
+    padding-left: 50%;
+    padding-right: 50%;
+  }
+  .navbar {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+  .nav-logo {
+    width: 120px;
+    margin-bottom: -10%;
+  }
+  .search {
+    margin-top: -10%;
+    margin-bottom: -20%;
+    padding: 7px 20px;
+  }
+}

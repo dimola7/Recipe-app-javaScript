@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: slategray;
+}
+.navbar {
+  top: 0;
+  position: sticky;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-right: 10%;
+  padding-left: 10%;
+  overflow: hidden;
+  background-color: #1e272e;
+}
+.nav-logo {
+  width: 140px;
+  margin-top: -4%;
+  margin-bottom: -4%;
+}
