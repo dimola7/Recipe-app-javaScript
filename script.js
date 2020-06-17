@@ -5,6 +5,7 @@ const updateUI = (data) => {
   const recipes = data.recipes;
   console.log(data);
   recipes.forEach((recipe) => {
+    const id = recipe.recipe_id;
     const html = `
     <div class="recipe-card">
      <div class="recipe-card-img-container">
@@ -18,7 +19,7 @@ const updateUI = (data) => {
           <h4>${recipe.title}</h4>
           </div>
           <div>
-          <a class="button" href="recipe.html">View Recipe</a>
+          <a class="button" href="recipe.html?rId=${id}">View Recipe</a>
           </div>
     </div>      
           `;
@@ -41,5 +42,14 @@ search.addEventListener("submit", (e) => {
   viewRecipes(recipes)
     .then((data) => updateUI(data))
     .then((showRecipe.innerHTML = ""))
-    .catch((err) => console.log(err));
+    .catch((err) => (showRecipe.innerHTML = `Sorry we don't have this recipe`));
+
+  // set localStorage
+  localStorage.setItem("recipes", recipes);
 });
+
+if (localStorage.getItem("recipes")) {
+  viewRecipes(localStorage.getItem("recipes"))
+    .then((data) => updateUI(data))
+    .catch((err) => console.log(err));
+}

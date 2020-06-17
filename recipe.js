@@ -10,16 +10,17 @@ const getRecipe = async (recipe) => {
   return recipes;
 };
 
-//get specific recipe
-// const singleRecipe = async (id) => {
-//   const base = "https://forkify-api.herokuapp.com/api/get";
-//   const query = `?rId=${id}`;
+// get specific recipe
+const recipeDets = async (id) => {
+  const base = "https://forkify-api.herokuapp.com/api/get";
+  const query = `?rId=${id}`;
 
-//   const response = await fetch(base + query);
-//   const data = await response.json();
+  const response = await fetch(base + query);
+  const data = await response.json();
 
-//   const { recipe } = data;
-//   return recipe;
-// };
-
+  const { recipe } = data;
+    return recipe;
+//   console.log(data);
+};
+// recipeDets(47746);
 //get?rId=47746
