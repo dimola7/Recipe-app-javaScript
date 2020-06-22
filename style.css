@@ -32,14 +32,6 @@
   text-decoration: none;
   color: #d63031;
 }
-/* .banner {
-  width: 100%;
-  display: block;
-}
-.banner-image {
-  width: 100%;
-  position: relative;
-} */
 .banner {
   width: 100%;
   height: 400px;
@@ -139,7 +131,9 @@
     padding-left: 50%;
     padding-right: 50%;
   }
-
+body{
+  max-width: 100%;
+}
   .search {
     margin-top: -10%;
     margin-bottom: -20%;
@@ -149,4 +143,10 @@
     width: 100%;
     position: relative;
   }
+  .banner {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('./assets/crust-delicious-dish.jpg');
+  background-size: cover;
+}
 }

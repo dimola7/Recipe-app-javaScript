@@ -28,7 +28,6 @@
 }
 .recipe-details {
   padding-top: 50px;
-  /* padding-left: 10%; */
   padding-right: 10%;
 }
 .detail-grid {
@@ -39,21 +38,85 @@
 }
 .picture-container {
   width: 400px;
+  height: 400px;
 }
 .picture-card {
-  width: 100%;
+  width: 90%;
+  height: 90%;
 }
 .ingredients h1 {
   font-family: "Balsamiq Sans", cursive;
-  padding-bottom: 4px;
+  margin-bottom: 20px;
 }
 .ingredients h3 {
   font-family: "Balsamiq Sans", cursive;
   color: #d63031;
+  margin-bottom: 18px;
 }
 .ingredients h3 a {
   font-family: "Balsamiq Sans", cursive;
-  padding-bottom: 4px;
   color: #d63031;
   text-decoration: none;
+}
+.ingredients .ingredients-head {
+  color: #000000;
+  margin-bottom: 14px;
+}
+.ingredients li {
+  margin-bottom: 24px;
+}
+.button {
+  background-color: #d63031;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  outline: none;
+  cursor: pointer;
+}
+.footer {
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 4%;
+  background-color: #d63031;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer-logo a {
+  text-decoration: none;
+  color: #ffffff;
+  float: left;
+  padding-left: 10%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Russo One", sans-serif;
+}
+.footer2 {
+  text-align: center;
+  color: #ffffff;
+  background-color: #2d3436;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.footer2 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 800px) {
+  * {
+  padding-left: 1%;
+}
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    justify-items: center;
+  }
 }

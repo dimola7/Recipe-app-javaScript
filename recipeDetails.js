@@ -13,9 +13,13 @@ const recipeDetails = (data) => {
     <div class="ingredients">
         <h1>${recipe.title}</h1>
         <h3>By <a href="${recipe.source_url}">${recipe.publisher}</a></h3>
+        <h3 class="ingredients-head">Ingredients</h3>
         <ul>
             <li>${recipe.ingredients}</li>
         </ul>
+        <div>
+          <a class="button" href="${recipe.source_url}">See more</a>
+        </div>
     </div>     
           `;
 };
