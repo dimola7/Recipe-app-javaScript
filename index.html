@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap"
       rel="stylesheet"
     />
@@ -11,8 +15,10 @@
     <title>Recipe App</title>
   </head>
   <body>
-    <ul class="navbar">
-      <img class="nav-logo" src="./assets/logo.png" alt="" />
+    <ul class="nav">
+      <div class="logo">
+        <a href="#">RECIPE</a>
+      </div>
       <form class="">
         <input
           type="text"
@@ -22,20 +28,36 @@
         />
       </form>
     </ul>
-    <div class="input-box">
-      <!-- <form class="">
-        <label for="recipe">Recipes</label>
-        <input type="text" name="recipe" class="sear" />
-      </form> -->
+
+    <div class="banner"></div>
+
+    <!-- <div class="banner">
+      <img
+        class="banner-image"
+        src="/assets/crust-delicious-pizza.jpg"
+        alt=""
+      />
+    </div> -->
+
+    <div class="results">
+      <!-- number of recipes avaialable -->
     </div>
+
     <div class="recipe recipe-grid">
       <!-- recipe data -->
     </div>
     <footer>
       <div class="footer">
-        <img class="footer-logo" src="./assets/logo.png" alt="" />
+        <div class="footer-logo">
+          <a href="#">RECIPE</a>
+        </div>
       </div>
     </footer>
+
+    <div class="footer2">
+      Copyright <span class="year" id="copyright">&copy;</span> All rights
+      reserved | Built by <a href="https://adedimola.netlify.app/">Adedimola</a>
+    </div>
     <script src="recipe.js"></script>
     <script src="script.js"></script>
   </body>

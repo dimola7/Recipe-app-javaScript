@@ -3,57 +3,60 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  background-color: slategray;
-}
-.navbar {
+.nav {
+  padding: 20px 0 20px 0;
+  text-align: right;
+  padding-right: 10%;
   top: 0;
   position: sticky;
-  list-style-type: none;
-  margin: 0;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-right: 10%;
-  padding-left: 10%;
+  background-color: #ffffff;
+  z-index: 4;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  background-color: #1e272e;
 }
-.nav-logo {
-  width: 140px;
-  margin-top: -4%;
-  margin-bottom: -4%;
-}
-
-.search {
-  margin-top: -3%;
-  float: right;
+.nav .search {
+  display: inline-block;
   padding: 7px 20px;
   box-sizing: border-box;
   border: 1px solid #555;
   outline: none;
 }
-.sear {
-  width: 30%;
-  padding: 12px 20px;
-  margin: auto;
+.logo {
+  float: left;
+  padding-left: 10%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Russo One", sans-serif;
+}
+.logo a {
+  text-decoration: none;
+  color: #d63031;
+}
+/* .banner {
+  width: 100%;
   display: block;
-  box-sizing: border-box;
-  border: 1px solid #555;
-  outline: none;
-  margin-bottom: 20px;
+}
+.banner-image {
+  width: 100%;
+  position: relative;
+} */
+.banner {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('./assets/crust-delicious-pizza.jpg');
+  background-size: cover;
 }
 
-.input-box {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2.5rem;
-  margin-bottom: 3rem;
+.results {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 16px;
   row-gap: 24px;
   justify-items: center;
@@ -62,7 +65,8 @@ body {
 .recipe-card {
   border: none;
   border-radius: 50%;
-  width: 200px;
+  width: 300px;
+  padding-bottom: 20px;
 }
 
 .recipe-card-img-container {
@@ -78,33 +82,42 @@ body {
 
 .footer {
   text-align: center;
-  padding-top: 2%;
-  padding-bottom: 8%;
-  padding-right: 10%;
-  padding-left: 10%;
-  background-color: #1e272e;
+  padding-top: 3%;
+  padding-bottom: 4%;
+  background-color: #d63031;
   color: white;
   position: relative;
   bottom: 0;
   width: 100%;
 }
-
-.footer-logo {
-  width: 140px;
+.footer-logo a {
+  text-decoration: none;
+  color: #ffffff;
   float: left;
-  margin-top: -3%;
-  margin-bottom: -4%;
+  padding-left: 10%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Russo One", sans-serif;
+}
+.footer2 {
+  text-align: center;
+  color: #ffffff;
+  background-color: #2d3436;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.footer2 a {
+  text-decoration: none;
+  color: #ffffff;
 }
 .title {
-  background-color: #1e272e;
-  color: #fff;
-  text-align: center;
+  color: #000000;
   font-family: "Balsamiq Sans", cursive;
   padding-top: 2%;
   padding-bottom: 2%;
 }
 .button {
-  background-color: #1e272e;
+  background-color: #d63031;
   border: none;
   color: white;
   padding: 7px 12px;
@@ -113,7 +126,6 @@ body {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  margin-left: 22%;
   outline: none;
   cursor: pointer;
 }
@@ -127,17 +139,14 @@ body {
     padding-left: 50%;
     padding-right: 50%;
   }
-  .navbar {
-    padding-right: 2%;
-    padding-left: 2%;
-  }
-  .nav-logo {
-    width: 120px;
-    margin-bottom: -10%;
-  }
+
   .search {
     margin-top: -10%;
     margin-bottom: -20%;
     padding: 7px 20px;
+  }
+  .banner-image {
+    width: 100%;
+    position: relative;
   }
 }

@@ -19,8 +19,5 @@ const recipeDets = async (id) => {
   const data = await response.json();
 
   const { recipe } = data;
-    return recipe;
-//   console.log(data);
+  return recipe;
 };
-// recipeDets(47746);
-//get?rId=47746

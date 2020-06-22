@@ -1,9 +1,13 @@
 const search = document.querySelector("form");
 const showRecipe = document.querySelector(".recipe");
+const showResults = document.querySelector(".results");
 
 const updateUI = (data) => {
   const recipes = data.recipes;
   console.log(data);
+  showResults.innerHTML = `
+      <p>There are ${recipes.length} recipes available</p>
+    `;
   recipes.forEach((recipe) => {
     const id = recipe.recipe_id;
     const html = `
@@ -17,6 +21,9 @@ const updateUI = (data) => {
         </div>
         <div class="title">
           <h4>${recipe.title}</h4>
+          </div>
+          <div class="publish">
+            <p>Published by ${recipe.publisher}</p>
           </div>
           <div>
           <a class="button" href="recipe.html?rId=${id}">View Recipe</a>
@@ -32,6 +39,7 @@ const viewRecipes = async (recipe) => {
 
   return { recipes };
 };
+// console.log(recipes);
 
 search.addEventListener("submit", (e) => {
   e.preventDefault();
