@@ -1,4 +1,5 @@
 const details = document.querySelector(".recipe-details");
+const loader = document.querySelector(".loader");
 
 const renderUI = (data) => {
   const recipe = data;
@@ -20,20 +21,25 @@ const renderUI = (data) => {
         </div>
     </div>     
           `;
-  const renderList = details.querySelector('.ingredients-list')
+  const renderList = details.querySelector(".ingredients-list");
   recipe.ingredients.forEach((ingredient) => {
     const list = `<li>${ingredient}</li>`;
     renderList.innerHTML += list;
   });
-}
+};
 
 addEventListener("DOMContentLoaded", (e) => {
   const search = new URLSearchParams(window.location.search);
 
+  loader.classList.remove("hide");
+
   const id = search.get("rId");
   if (id) {
     recipeDets(id)
-      .then((data) => renderUI(data))
+      .then((data) => {
+        loader.classList.add("hide");
+        renderUI(data);
+      })
       .catch((err) => console.log(err));
   }
 });

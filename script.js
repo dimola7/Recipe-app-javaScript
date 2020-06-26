@@ -1,6 +1,7 @@
 const search = document.querySelector("form");
 const showRecipe = document.querySelector(".recipe");
 const showResults = document.querySelector(".results");
+const loader = document.querySelector(".loader");
 
 const updateUI = (data) => {
   const recipes = data.recipes;
@@ -39,7 +40,6 @@ const viewRecipes = async (recipe) => {
 
   return { recipes };
 };
-// console.log(recipes);
 
 search.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -47,9 +47,15 @@ search.addEventListener("submit", (e) => {
   const recipes = search.recipe.value.trim();
   search.reset();
 
+  loader.classList.remove("hide");
+
+  showRecipe.innerHTML = "";
+
   viewRecipes(recipes)
-    .then((data) => updateUI(data))
-    .then((showRecipe.innerHTML = ""))
+    .then((data) => {
+      loader.classList.add("hide");
+      updateUI(data);
+    })
     .catch((err) => (showRecipe.innerHTML = `Sorry we don't have this recipe`));
 
   // set localStorage
